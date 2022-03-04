@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Montserrat:wght@400;700&family=Raleway:wght@400;500;700&display=swap');
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+
+
+:root {
+    --small-gap : 16px;
+    --medium-gap: 32px;
+    --large-gap: 64px;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --fontColor: white;
+    --smallBox: 500px;
+    --numberColors:#F5614D;
+}
+
+html {
+    font-size: 16px;
+    /*transition: font-size var(--transition-duration);*/
+}
+
+.all {
+    /* margin: var(--large-gap) var(--medium-gap); */
+    max-width: 1538px;
+    margin: var(--large-gap) auto;
+    padding: 0 var(--medium-gap);
+}
+
+
+.Header {
+    font-family: var(--secondary-font);      
+    display: flex;
+    /* flex-wrap: wrap;*/
+    /* surcharge par rapport à la flex_direction, 
+    surtout il permet de renvoyer a la ligne les element qui dépasse du cadre, 
+    c'est donc incompatible */
+    flex-direction: column;
+    color: var(--fontColor);
+    row-gap: var(--medium-gap);
+    column-gap: var(--medium-gap); 
+}
+
+.Header > * {                /* Permet de selection les classes filles direct a header */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    width: 100%;
+    height: var(--smallBox);
+
+    column-gap: var(--small-gap);
+    background-position: center top;
+    background-size: cover;
+    
+}
+
+.Categories {
+    font-weight: 700;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.Clothing {
+    background-image: url('img/clothings.jpg');     
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.Accessories {
+    background-image: url('img/accessories.jpg');
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: var(--numberColors);
+    font-weight: 700;
+    font-size: 1.5rem;
+
+}
+
+.Bottom {
+    margin-top: var(--medium-gap);
+    font-family: var(--primary-font);
+    color: var(--fontColor);
+    height: var(--smallBox);
+    background-image: url('img/sale_starts_in.jpg');
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    justify-content:center;
+    align-items: center;   
+}
+
+.Bottom > p {
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    transition: font-size var(--transition-duration);
+}
+
+
+hr {
+    width: 4rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: var(--small-gap) var(--small-gap);
+}
+
+.FullTimer {
+    display: flex;
+    justify-content: center;
+    column-gap: var(--small-gap);  
+    text-align: center;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .Header {
+        flex-direction:row;
+    }
+   html {
+       font-size: 20px;
+   }
+
+}

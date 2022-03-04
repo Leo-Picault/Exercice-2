@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500&family=Montserrat:wght@400;700&family=Raleway:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #F5614D;
+    --gradient-color: #EF7944;
+    --primary-font: Montserrat, sans-serif;
+    --secondary-font: Raleway, serif;
+    --little-gap: 16px;
+    --medium-gap: 32px;
+    --large-gap: 64px;
+    --transition-duration: 0.2s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--primary-font);
+}
+
+p {
+    margin: 0;
+}
+
+#discounts {
+    max-width: 1538px;
+    margin: var(--large-gap) auto;
+    padding: 0 var(--medium-gap);
+    color: white;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+#clothing-accessories-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--medium-gap);
+    row-gap: var(--medium-gap);
+    margin-bottom: var(--medium-gap);
+}
+
+#clothing-accessories-container > * {
+    height: 423px;
+    width: 100%;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--little-gap);
+}
+
+#clothing-accessories-container p:not(.badge) {
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+#clothing-accessories-container .badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+#clothings {
+    background-image: url('img/clothings.jpg');
+}
+
+#accessories {
+    background-image: url('img/accessories.jpg');
+}
+
+#sale-starts-in {
+    height: 525px;
+    background-image: url('img/sale_starts_in.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: var(--large-gap) 0;
+}
+
+#sale-starts-in > p {
+    font-size: 2.5rem;
+    text-align: center;
+    transition: font-size var(--transition-duration);
+}
+
+#sale-starts-in hr {
+    width: 45px;
+    margin: 0 auto;
+}
+
+#countdown-container {
+    display: flex;
+    justify-content: center;
+    column-gap: var(--little-gap);
+    transition: column-gap var(--transition-duration);
+}
+
+#countdown-container p:first-child {
+    font-family: var(--primary-font);
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: var(--little-gap);
+    transition: font-size var(--transition-duration);
+}
+
+#countdown-container p:last-child {
+    font-size: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: font-size var(--transition-duration);
+}
+
+.badge {
+    color: white;
+    font-family: var(--primary-font);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, var(--primary-color), var(--gradient-color));
+    margin: 0;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768px) {
+    #clothing-accessories-container {
+        flex-direction: row;
+    }
+
+    #sale-starts-in > p {
+        font-size: 3rem;
+    }
+
+    #countdown-container {
+        column-gap: var(--medium-gap);
+    }
+
+    #countdown-container p:first-child {
+        font-size: 2.5rem;
+    }
+
+    #countdown-container p:last-child {
+        font-size: 0.8rem;
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1280px) {
+    #countdown-container {
+        column-gap: var(--large-gap);
+    }
+    
+    #countdown-container p:first-child {
+        font-size: 5rem;
+    }
+
+    #countdown-container p:last-child {
+        font-size: 1rem;
+    }
+}
